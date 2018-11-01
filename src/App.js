@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import './ResultDisplay/ResultDisplay'
 import ResultDisplay from './ResultDisplay/ResultDisplay';
-import Formula from './Formula/Formula'
+import Formula from './Formula/Formula';
+import Buttons from './Buttons/Buttons';
 
 class App extends Component {
 
@@ -11,6 +12,7 @@ class App extends Component {
       <div className="App">
         <ResultDisplay/>
         <Formula />
+        <Buttons />
       </div>
     );
   }

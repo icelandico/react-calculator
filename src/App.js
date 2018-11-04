@@ -18,7 +18,7 @@ class App extends Component {
     switch (calcValue) {
       case 'AC':
         this.setState({
-          formula: '0',
+          formula: '',
           result: null
         });
       break;
@@ -30,7 +30,7 @@ class App extends Component {
       break;
       default:
       this.setState({
-        formula: this.state.formula + calcValue
+        formula: (!this.state.formula && !parseInt(calcValue) ? '' : this.state.formula + calcValue)
       })
       break;
     }

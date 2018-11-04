@@ -18,7 +18,8 @@ class App extends Component {
     switch (calcValue) {
       case 'AC':
         this.setState({
-          formula: '0'
+          formula: '0',
+          result: null
         });
       break;
       case 'equal':
@@ -33,6 +34,14 @@ class App extends Component {
       })
       break;
     }
+  }
+
+  removeLast = () => {
+    const formulaLength = this.state.formula.length
+    console.log(formulaLength)
+    this.setState({
+      formula: this.state.formula.substring(0, formulaLength - 1)
+    })
   }
 
   render() {

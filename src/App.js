@@ -8,13 +8,31 @@ import Buttons from './Buttons/Buttons';
 class App extends Component {
 
   state = {
-    formula: ''
+    formula: '',
+    result: null
   }
 
   handleButtonClick = (event) => {
-    this.setState({
-      formula: this.state.formula += event.target.value
-    })
+    const calcValue = event.target.value;
+
+    switch (calcValue) {
+      case 'AC':
+        this.setState({
+          formula: '0'
+        });
+      break;
+      case 'equal':
+        this.handleResult()
+      break;
+      case 'x':
+        this.removeLast()  
+      break;
+      default:
+      this.setState({
+        formula: this.state.formula + calcValue
+      })
+      break;
+    }
   }
 
   render() {

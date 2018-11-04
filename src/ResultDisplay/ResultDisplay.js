@@ -7,7 +7,7 @@ class ResultDisplay extends Component {
         id="display"
         className="result-display"
       >
-        <p>{this.props.result}</p>
+        <p>{this.props.result || 0}</p>
       </div>
     )
   }

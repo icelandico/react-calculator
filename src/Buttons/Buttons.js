@@ -15,9 +15,12 @@ class Buttons extends Component {
         <button id="divide" value="/">/</button>
         <button id="add" value="+">+</button>
         <button id="subtract" value="-">-</button>
+
         <button id="clear" value="AC">AC</button>
         <button id="decimal" value=".">.</button>
-        <button id="equal" value="=">=</button>
+        <button id="back" value="x">Delete</button>
+
+        <button id="equal" value="equal">=</button>
  
         <button id="one" value="1">1</button>
         <button id="two" value="2">2</button>

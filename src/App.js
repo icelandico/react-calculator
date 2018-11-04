@@ -7,12 +7,26 @@ import Buttons from './Buttons/Buttons';
 
 class App extends Component {
 
+  state = {
+    formula: ''
+  }
+
+  handleButtonClick = (event) => {
+    this.setState({
+      formula: this.state.formula += event.target.value
+    })
+  }
+
   render() {
     return (
       <div className="App">
         <ResultDisplay/>
-        <Formula />
-        <Buttons />
+        <Formula
+          formula={this.state.formula}
+        />
+        <Buttons
+          handleButtonClick={this.handleButtonClick}
+        />
       </div>
     );
   }

@@ -1,16 +1,23 @@
 import React, { Component } from 'react';
 
 class Buttons extends Component {
+
+  handleButtonClick = (e) => {
+    this.props.handleButtonClick(e);
+  }
   render() {
     return(
-      <div className="buttons-container">
-        <button id="multiply" value="multiply">*</button>
-        <button id="divide" value="divide">/</button>
-        <button id="add" value="add">+</button>
-        <button id="subtract" value="subtract">-</button>
+      <div
+        onClick={(event) => this.handleButtonClick(event)}
+        className="buttons-container"
+      >
+        <button id="multiply" value="*">*</button>
+        <button id="divide" value="/">/</button>
+        <button id="add" value="+">+</button>
+        <button id="subtract" value="-">-</button>
         <button id="clear" value="AC">AC</button>
-        <button id="decimal" value="decimal">.</button>
-        <button id="equal" value="equal">=</button>
+        <button id="decimal" value=".">.</button>
+        <button id="equal" value="=">=</button>
  
         <button id="one" value="1">1</button>
         <button id="two" value="2">2</button>

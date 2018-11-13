@@ -1,5 +1,5 @@
 # Simple calculator app made using React.js
-______________
+`` Not finished yet ``
 ## More
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

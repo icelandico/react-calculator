@@ -38,8 +38,9 @@ class App extends Component {
 
   handleResult = () => {
     const formula = this.state.formula;
+    const result = eval(formula);
     this.setState({
-      result: eval(formula)
+      result: result
     })
   }
 

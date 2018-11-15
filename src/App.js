@@ -36,9 +36,15 @@ class App extends Component {
     }
   }
 
+  handleResult = () => {
+    const formula = this.state.formula;
+    this.setState({
+      result: eval(formula)
+    })
+  }
+
   removeLast = () => {
     const formulaLength = this.state.formula.length
-    console.log(formulaLength)
     this.setState({
       formula: this.state.formula.substring(0, formulaLength - 1)
     })
@@ -47,7 +53,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <ResultDisplay/>
+        <ResultDisplay
+          result={this.state.result}
+        />
         <Formula
           formula={this.state.formula}
         />

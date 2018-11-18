@@ -1,5 +1,6 @@
 # Simple calculator app made using React.js
 `` Not finished yet ``
+Available [here](https://icelandico.github.io/react-calculator/)
 ## More
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

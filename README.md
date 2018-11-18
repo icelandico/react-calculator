@@ -1,6 +1,6 @@
 # Simple calculator app made using React.js
 `` Not finished yet ``
-Available [here](http://calc-react.surge.sh//)
+Available [here](http://calc-react.surge.sh//){: target="_blank"}
 ## More
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

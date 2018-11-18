@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+  margin: 0 auto;
+  background: lightgray;
+  width: 50%;
+  padding: 5px;
+}
+
+.display {
+  background: rgb(168, 155, 155);
+}
+
+.result-display {
+
+}

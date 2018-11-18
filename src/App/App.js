@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-import './ResultDisplay/ResultDisplay'
-import ResultDisplay from './ResultDisplay/ResultDisplay';
-import Formula from './Formula/Formula';
-import Buttons from './Buttons/Buttons';
+import '../ResultDisplay/ResultDisplay'
+import ResultDisplay from '../ResultDisplay/ResultDisplay';
+import Formula from '../Formula/Formula';
+import Buttons from '../Buttons/Buttons';
 
 class App extends Component {
 
@@ -54,12 +54,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+      <div className="display">
         <ResultDisplay
           result={this.state.result}
         />
         <Formula
           formula={this.state.formula}
-        />
+        />      
+      </div>
         <Buttons
           handleButtonClick={this.handleButtonClick}
         />

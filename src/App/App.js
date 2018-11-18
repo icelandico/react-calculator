@@ -17,7 +17,7 @@ class App extends Component {
     switch (calcValue) {
       case 'AC':
         this.setState({
-          formula: '',
+          formula: '0',
           result: null
         });
       break;
@@ -29,21 +29,20 @@ class App extends Component {
       break;
       default:
       this.setState({
-        formula: this.validateFormula(calcValue)//(!this.state.formula && !parseInt(calcValue) ? '' : this.state.formula + calcValue)
+        formula: this.validateFormula(calcValue)
       })
       break;
     }
   }
 
   validateFormula = (value) => {
-    console.log(value)
     switch (value) {
       case '0':
-        return (this.state.formula ? this.state.formula + value : '');
+        return this.state.formula !== '0' ? this.state.formula + value : '0';
       case '.':
-        //return this.state.formula !== '' ? '0' + value : this.state.formula + value;
+        return this.state.formula[-1] === value ? null : this.state.formula + value;
       default:
-        return !this.state.formula && !parseInt(value) ? '' : this.state.formula + value
+        return this.state.formula === '0' ?  value : this.state.formula + value;
     } 
   }
 

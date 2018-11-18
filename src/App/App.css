@@ -8,8 +8,13 @@
 
 .display {
   background: rgb(168, 155, 155);
+  padding: 0.5rem;
 }
 
 .result-display {
+  margin-bottom: 1rem;
+}
 
+.display-item {
+  text-align: right;
 }

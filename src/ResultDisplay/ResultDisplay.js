@@ -5,7 +5,7 @@ class ResultDisplay extends Component {
     return (
       <div 
         id="display"
-        className="result-display"
+        className="display-item result-display"
       >
         <p>{this.props.result || 0}</p>
       </div>

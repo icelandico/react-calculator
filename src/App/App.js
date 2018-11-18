@@ -8,13 +8,12 @@ import Buttons from '../Buttons/Buttons';
 class App extends Component {
 
   state = {
-    formula: '',
+    formula: '0',
     result: null
   }
 
   handleButtonClick = (event) => {
     const calcValue = event.target.value;
-
     switch (calcValue) {
       case 'AC':
         this.setState({
@@ -30,10 +29,22 @@ class App extends Component {
       break;
       default:
       this.setState({
-        formula: (!this.state.formula && !parseInt(calcValue) ? '' : this.state.formula + calcValue)
+        formula: this.validateFormula(calcValue)//(!this.state.formula && !parseInt(calcValue) ? '' : this.state.formula + calcValue)
       })
       break;
     }
+  }
+
+  validateFormula = (value) => {
+    console.log(value)
+    switch (value) {
+      case '0':
+        return (this.state.formula ? this.state.formula + value : '');
+      case '.':
+        //return this.state.formula !== '' ? '0' + value : this.state.formula + value;
+      default:
+        return !this.state.formula && !parseInt(value) ? '' : this.state.formula + value
+    } 
   }
 
   handleResult = () => {

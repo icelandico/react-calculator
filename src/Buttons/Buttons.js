@@ -33,7 +33,7 @@ class Buttons extends Component {
         <button className="single-button" id="zero" value="0">0</button>
         <button className="single-button" id="decimal" value=".">.</button>
         <button className="single-button" id="equal" value="equal">=</button>
-        <button className="single-button" id="multiply" value="*">*</button>
+        <button className="single-button" id="multiply" value="*">X</button>
       </div>
     )
   }

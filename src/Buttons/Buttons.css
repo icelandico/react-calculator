@@ -5,13 +5,17 @@
 
 .single-button {
   flex-basis: 23%;
-  background: #667988;
+  background-color: #8A95A5;
   margin: 1%;
   height: 50px;
-  width: 50px;
   border-radius: 5px;
+  border: none;
 }
 
 .clear {
   flex-basis: 48%;
+  background-color: #7A3A3A;
+  color: #E6E1E1;
+  font-weight: 700;
+  text-transform: uppercase;
 }

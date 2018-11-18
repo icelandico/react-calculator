@@ -1,8 +1,15 @@
+#root {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .App {
   text-align: center;
   margin: 0 auto;
   background: lightgray;
-  width: 50%;
+  max-width: 50%;
   padding: 5px;
 }
 

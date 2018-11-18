@@ -4,8 +4,14 @@
 }
 
 .single-button {
-  flex: 1 1 100px;
+  flex-basis: 23%;
   background: #667988;
   margin: 1%;
   height: 50px;
+  width: 50px;
+  border-radius: 5px;
+}
+
+.clear {
+  flex-basis: 48%;
 }

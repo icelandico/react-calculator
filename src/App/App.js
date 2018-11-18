@@ -48,9 +48,20 @@ class App extends Component {
 
   handleResult = () => {
     const formula = this.state.formula;
-    const result = eval(formula);
+    function checkEval(formula) {
+      let result = '';
+      try {
+        eval(formula);
+        result = eval(formula) 
+      } catch (error) {
+        if (error instanceof SyntaxError) {
+          result = 'Syntax Error!'
+        }
+      }
+      return result
+    }
     this.setState({
-      result: result
+      result: checkEval(formula)
     })
   }
 

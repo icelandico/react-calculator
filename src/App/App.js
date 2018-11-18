@@ -68,7 +68,7 @@ class App extends Component {
   removeLast = () => {
     const formulaLength = this.state.formula.length
     this.setState({
-      formula: this.state.formula.substring(0, formulaLength - 1)
+      formula: formulaLength === 1 ? '0' : this.state.formula.substring(0, formulaLength - 1)
     })
   }
 

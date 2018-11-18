@@ -18,7 +18,7 @@ time, mark, audio, video {
 	font: inherit;
   vertical-align: baseline;
   font-family: 'Ubuntu', monospace;
-  font-size: 2rem;
+  font-size: 1.5rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

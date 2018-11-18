@@ -56,6 +56,8 @@ class App extends Component {
       } catch (error) {
         if (error instanceof SyntaxError) {
           result = 'Syntax Error!'
+        } else if (error instanceof ReferenceError) {
+          result = 'Syntax Error!'
         }
       }
       return result

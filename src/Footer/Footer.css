@@ -1,0 +1,32 @@
+.footer {
+  margin-top: 5%;
+  text-align: center;
+}
+
+.footer-title p {
+  font-size: 0.5rem;
+}
+
+.footer-icons {
+  margin-top: 2%;
+}
+
+.link {
+  padding: 0.25rem;
+  margin: 0 3%;
+  background: #6c798b;
+  color: #5C5757;
+  border-radius: 5px;
+  border: none;
+
+}
+
+.link a {
+  text-decoration: none;
+  font-size: 0.6rem;
+  color: #E6E1E1;
+}
+
+.link:hover a {
+  font-weight: 700;
+}

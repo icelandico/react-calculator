@@ -1,13 +1,23 @@
-import React, { Component } from 'react' 
+import React, { Component } from 'react';
+import './../Footer/Footer.css'
 
 class Footer extends Component {
   render() {
     return (
-      <div class="footer">
-        <p>
-          Created by Michal Muszynski
-        </p>
-      </div>
+      <footer className="footer">
+        <div className="footer-content">
+          <div className="footer-title">
+            <p>
+              Created by Michał Muszyński
+            </p>
+          </div>
+          <div className="footer-icons">
+            <button className="link"><a href="https://github.com/icelandico" target="_blank">GitHub</a></button>
+            <button className="link"><a href="http://michalmuszynski.com" target="_blank">Website</a></button>
+          </div>
+
+        </div>
+      </footer>
     )
   }
 }

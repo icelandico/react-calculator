@@ -1,5 +1,5 @@
 # Simple calculator app made using React.js
-`` Not finished yet ``
+
 Available <a href="http://calc-react.surge.sh//" target="_blank">here</a>
 ## More
 

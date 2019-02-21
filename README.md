@@ -1,6 +1,6 @@
 # Simple calculator app made using React.js
 
-Available <a href="http://calc-react.surge.sh//" target="_blank">here</a>
+Available <a href="https://icelandico.github.io/react-calculator/" target="_blank">here</a>
 ## More
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

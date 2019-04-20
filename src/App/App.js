@@ -40,11 +40,11 @@ class App extends Component {
     const { formula } = this.state
     switch (value) {
       case '0':
-        return this.state.formula !== '0' ? this.state.formula + value : '0'
+        return formula !== '0' ? formula + value : '0'
       case '.':
-        return formula[formula.length - 1] === value ? formula : this.state.formula + value
+        return formula[formula.length - 1] === value ? formula : formula + value
       default:
-        return this.state.formula === '0' ?  value : this.state.formula + value
+        return formula === '0' ?  value : formula + value
     } 
   }
 

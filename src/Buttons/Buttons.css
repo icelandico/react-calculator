@@ -43,9 +43,3 @@
 .single-button:active {
   transform: translateY(3px);
 }
-
-@media screen and (min-width: 768px) {
-  .single-button {
-    height: 90px;
-  }
-}

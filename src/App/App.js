@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from 'react'
+import './App.css'
 import '../ResultDisplay/ResultDisplay'
-import ResultDisplay from '../ResultDisplay/ResultDisplay';
-import Formula from '../Formula/Formula';
-import Buttons from '../Buttons/Buttons';
-import Footer from '../Footer/Footer';
+import ResultDisplay from '../ResultDisplay/ResultDisplay'
+import Formula from '../Formula/Formula'
+import Buttons from '../Buttons/Buttons'
+import Footer from '../Footer/Footer'
 
 class App extends Component {
 
@@ -14,45 +14,46 @@ class App extends Component {
   }
 
   handleButtonClick = (event) => {
-    const calcValue = event.target.value;
+    const calcValue = event.target.value
     switch (calcValue) {
       case 'AC':
         this.setState({
           formula: '0',
           result: null
-        });
-      break;
+        })
+      break
       case 'equal':
         this.handleResult()
-      break;
+      break
       case 'x':
         this.removeLast()  
-      break;
+      break
       default:
       this.setState({
         formula: this.validateFormula(calcValue)
       })
-      break;
+      break
     }
   }
 
   validateFormula = (value) => {
+    const { formula } = this.state
     switch (value) {
       case '0':
-        return this.state.formula !== '0' ? this.state.formula + value : '0';
+        return this.state.formula !== '0' ? this.state.formula + value : '0'
       case '.':
-        return this.state.formula[-1] === value ? null : this.state.formula + value;
+        return formula[formula.length - 1] === value ? formula : this.state.formula + value
       default:
-        return this.state.formula === '0' ?  value : this.state.formula + value;
+        return this.state.formula === '0' ?  value : this.state.formula + value
     } 
   }
 
   handleResult = () => {
-    const formula = this.state.formula;
+    const formula = this.state.formula
     function checkEval(formula) {
-      let result = '';
+      let result = ''
       try {
-        eval(formula);
+        eval(formula)
         result = eval(formula) 
       } catch (error) {
         if (error instanceof SyntaxError) {
@@ -89,13 +90,13 @@ class App extends Component {
         </div>
           <Buttons
             handleButtonClick={this.handleButtonClick}
-        />
+          />
       </div>
       <Footer />
       </div>
 
-    );
+    )
   }
 }
 
-export default App;
+export default App
